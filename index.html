@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/display.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> 
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Calculadora</title>
+</head>
+<body onload="setDefaultValue()">
+    <div class="calculator">
+        <input class="miniDisplay" name="miniDisplay" id="miniDisplay" type="text" disabled />
+        <input class="display" name="display" id="display" type="text" value="" disabled />
+
+        <div class="buttons">
+                <input type="button" id="clear" class="purple-text" value="CE" onclick="setDefaultValue()">
+                <input type="button" id="invert" value="+/-" class="purple-background" onclick="invertNumber()">
+                <input type="button" id="divide" name="divide" class="purple-background" value="/" onclick="Operator('divide')">
+                <input type="button" id="seven" value="7" name="7" onclick="showNumber(7)" />
+                <input type="button" id="eight" value="8" onclick="showNumber(8)" />
+                <input type="button" id="nine" value="9" onclick="showNumber(9)" />
+                <input type="button" id="multiply" name="multiply" class="purple-background" value="x" onclick="Operator('multiply')">
+                <input type="button" id="four" value="4" onclick="showNumber(4)" />
+                <input type="button" id="five" value="5" onclick="showNumber(5)" />
+                <input type="button" id="six" value="6" onclick="showNumber(6)" />
+                <input type="button" id="less" name="less" class="purple-background" value="-" onclick="Operator('less')">
+                <input type="button" id="one" value="1" onclick="showNumber(1)" />
+                <input type="button" id="two" value="2" onclick="showNumber(2)" />
+                <input type="button" id="three" value="3" onclick="showNumber(3)" />
+                <input type="button" id="plus" name="plus" class="purple-background" value="+" onclick="Operator('plus')">    
+                <input type="button" id="zero" value="0" onclick="showNumber(0)" />
+                <input type="button" id="decimal" value="." onclick="convertToDecimal()">
+                <input type="button" id="equal" class="light-purple-background" value="=" onclick="calculate()">  
+        </div>
+    </div>
+</body>
+
+<script src="index.js"></script>
+</html>
