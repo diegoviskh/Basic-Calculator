@@ -1,3 +1,3 @@
-# Calculadora
+# Basic-Calculator
 
 Projeto em desenvolvimento.
